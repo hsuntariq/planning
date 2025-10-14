@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      const pathname = window.location.pathname;
+
+      // Automatically prefix your repo name ("planning")
+      const newURL = '/planning' + pathname;
+
+      // Redirect only if not already prefixed
+      if (!pathname.startsWith('/planning')) {
+        window.location.replace(newURL);
+      } else {
+        document.body.innerHTML = "<h2>Page not found</h2>";
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
